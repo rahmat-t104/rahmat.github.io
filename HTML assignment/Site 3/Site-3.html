@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta name=”robots" content=”noindex, nofollow">
+<meta charset="UTF-8">
+<title>Game 2</title>
+<style> 
+	
+
+	#slider{
+	position: absolute;
+	left: 492px;
+	top: 529px;
+	width: 486px;
+}
+	#pizza {
+	position: absolute;
+	left: 447px;
+	top: 125px;
+}
+	#h2{
+	position: absolute;
+	left: 476px;
+	top: 70px;
+	width: 665px;
+	height: 86px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+	
+#bar{
+	width:500px;
+	height:80px;
+	overflow:hidden;
+	position:relative;
+	border-radius:40px;
+	cursor:pointer;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff0000+0,ff2828+43,00ff00+44,00ff00+44,00ff00+64,ff2828+65,ff0000+100 */
+	background: #ff0000; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ff0000 0%, #ff2828 43%, #00ff00 44%, #00ff00 44%, #00ff00 64%, #ff2828 65%, #ff0000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0000), color-stop(43%,#ff2828), color-stop(44%,#00ff00), color-stop(44%,#00ff00), color-stop(64%,#00ff00), color-stop(65%,#ff2828), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ff0000 0%,#ff2828 43%,#00ff00 44%,#00ff00 44%,#00ff00 64%,#ff2828 65%,#ff0000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ff0000 0%,#ff2828 43%,#00ff00 44%,#00ff00 44%,#00ff00 64%,#ff2828 65%,#ff0000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ff0000 0%,#ff2828 43%,#00ff00 44%,#00ff00 44%,#00ff00 64%,#ff2828 65%,#ff0000 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ff0000 0%,#ff2828 43%,#00ff00 44%,#00ff00 44%,#00ff00 64%,#ff2828 65%,#ff0000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+}
+#marker{
+	position:absolute;
+	width:80px;
+	height:80px;
+	background:black;
+	border-radius:40px;
+}
+	body{background-image:url(images/restaurant.png) 
+
+</style>
+
+</head>
+
+
+<body>
+<div id="slider">
+<div id="bar" onclick="checkMarker()">
+<div id="marker" style="left:202.515625px;"></div>
+	</div></div>
+
+
+<p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+   function moveMarker() {
+	  $("#marker").animate({"left":"420px"},1500)
+      .animate({"left":"0px"},1500,function(){moveMarker()});
+   }
+   moveMarker();
+   
+   function checkMarker(){
+		position = $("#marker").position().left;
+		// check if the marker position is between 216 and 242
+		if(position > 216 && position < 242){
+			alert("You did it!");setTimeout(
+	function() {window.location ="file:///Users/rahmat/Desktop/HTML%20assignment/Site%204/Site-4.html"
+ }, 1000);
+
+		} else {
+			alert("Try again");
+		}
+		$("#message").text("Marker is "+position+"px from the left");
+   }
+   
+</script>
+<div id="pizza"><img src="images/Pizzainoven.png" width="600" height="400" alt=""/></div>
+<div id="h2"><h2>Choose the right time below to take the pizza out!</h2></div>
+	</p>
+</body>
+</html>
+
+
+

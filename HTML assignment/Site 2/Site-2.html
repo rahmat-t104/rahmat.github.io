@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta name=”robots" content=”noindex, nofollow">
+<meta charset="UTF-8">
+<title>Game 1</title>
+<style>
+	#h1{
+	position: absolute;
+	left: 502px;
+	top: 31px;
+	width: 531px;
+}
+	#pizza{
+	position: absolute;
+	left: 253px;
+	top: 106px;
+}
+	#onions{
+	position: absolute;
+	left: 506px;
+	top: 480px;
+}
+	#pepe{
+	position: absolute;
+	left: 502px;
+	top: 193px;
+}
+	#pepper{
+	position: absolute;
+	left: 505px;
+	top: 342px;
+}
+	#cheese{
+	position: absolute;
+	left: 357px;
+	top: 343px;
+}
+	#chicken{
+	position: absolute;
+	left: 355px;
+	top: 483px;
+}
+	#tomato{
+	position: absolute;
+	left: 361px;
+	top: 192px;
+}
+	body{background-image: url(images/restaurant.png)
+	
+</style>
+
+	
+	
+	
+
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('images/tomatoswapyes.jpg','images/Pepperoniswap.jpg','images/cheeseswap.jpg','images/Pepperswap.jpg','images/chickenswap.jpg','images/Onionswap.jpg')">
+
+<p>
+<div id="h1"><h2>Choose the three right ingredients for the pizza!</h2></div>
+
+<div id="pizza"><img src="images/Pizzalay.jpg" width="1000" height="562.5" alt=""/></div>
+<div id="onions">
+<button onclick="clicked='';alert('We dont use onions!')";><img src="images/Onionyes.png" alt="" width="90" height="90" id="Image6" onMouseOver="MM_swapImage('Image6','','images/Onionswap.jpg',1)" onMouseOut="MM_swapImgRestore()"/> </button>
+
+</div> 
+
+<div id="pepe">
+  <button onclick="countClicks('pepe')";><img src="images/Pepperoniyes.png" alt="" width="90" height="90" id="Image2" onMouseOver="MM_swapImage('Image2','','images/Pepperoniswap.jpg',1)" onMouseOut="MM_swapImgRestore()"/></button>
+</div>
+<div id="pepper">
+<button onclick="clicked='';alert('We dont use pepper!')";><img src="images/Pepperyes.png" alt="" width="88" height="88" id="Image4" onMouseOver="MM_swapImage('Image4','','images/Pepperswap.jpg',1)" onMouseOut="MM_swapImgRestore()"/></button>
+</div>
+<div id="cheese">
+<button onclick="countClicks('cheese')";><img src="images/Cheeseyes.png" alt="" width="88" height="88" id="Image3" onMouseOver="MM_swapImage('Image3','','images/cheeseswap.jpg',1)" onMouseOut="MM_swapImgRestore()"/></button>
+</div>
+<div id="chicken">
+<button onclick="countClicks('chicken')";><img src="images/chickenyes.png" alt="" width="88" height="88" id="Image5" onMouseOver="MM_swapImage('Image5','','images/chickenswap.jpg',1)" onMouseOut="MM_swapImgRestore()"/></button>
+</div>
+<div id="tomato">
+<button onclick="clicked='';alert('We dont use tomato!')";><img src="images/tomatoyes.jpg" alt="" width="88" height="88" id="Image1" onMouseOver="MM_swapImage('Image1','','images/tomatoswapyes.jpg',1)" onMouseOut="MM_swapImgRestore()"/></button>
+</div>
+
+
+
+</p>
+</body>
+<script>
+
+var clicked="";
+function countClicks(item){
+	count=0;
+	clicked+=item;
+	if(clicked.indexOf("cheese")!=-1){
+		count++;
+	}
+	if(clicked.indexOf("chicken")!=-1){
+		count++;
+	}
+	if(clicked.indexOf("pepe")!=-1){
+		count++;
+	}
+	if(count==3){
+		alert("You found all the right ingredients!");
+		clicked="";
+		
+
+	}
+	
+	if(count==3){setTimeout(
+	function() {window.location="file:///Users/rahmat/Desktop/HTML%20assignment/Site%203/Site-3.html"
+ }, 1000);
+}
+}
+
+</script>
+</html>
+
+
+
